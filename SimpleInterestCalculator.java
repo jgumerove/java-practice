@@ -17,13 +17,13 @@ class SimpleInterestCalculator {
         return interest;
     };
 
-    BigDecimal totalValue(String years){
+    BigDecimal totalValue(int years){
         BigDecimal interestAmount = principal.multiply(interest).multiply(new BigDecimal(years));
         return interestAmount.add(principal);
     }
 
     public static void main(String [] args){
         SimpleInterestCalculator test = new SimpleInterestCalculator("500", "0.07");
-        System.out.println(test.totalValue("5"));
+        System.out.println(test.totalValue(5));
     }
 }
